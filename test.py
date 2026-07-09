@@ -25,6 +25,12 @@ def test_add_new_book_invalid_name_not_added(books, name):
     books.add_new_book(name)
     assert name not in books.books_genre
 
+def test_add_new_book_repeat_add_book_not_added(books):
+    name = 'Русалочка'
+    for _ in range(2):
+        books.add_new_book(name)
+    assert len(books.books_genre) == 1
+
 @pytest.mark.parametrize('genre', ['Фантастика', 'Ужасы', 'Детективы', 'Мультфильмы', 'Комедии'])
 def test_set_book_genre_valid_genre_assigned(books, genre):
     name = 'Джо'
@@ -95,3 +101,4 @@ def test_get_list_of_favorites_books_return_favorites(books_collection):
     books_collection.add_book_in_favorites('Агата Кристи')
     books_collection.add_book_in_favorites('Оно')
     assert books_collection.get_list_of_favorites_books() == ['Агата Кристи', 'Оно']
+    
