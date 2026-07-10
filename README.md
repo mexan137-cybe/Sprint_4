@@ -23,7 +23,7 @@
 5. **Метод `get_books_genre`:**
    * "test_get_books_genre_return_books_genre" – проверяет получение словаря со всеми книгами и их жанрами (коллекция содержит 5 книг).
 6. **Метод `get_books_for_children`:**
-   * "test_get_books_for_children_return_books_for_children" – проверяет, что в списке для детей отсутствуют книги жанров "Ужасы" и "Детективы".
+   * "test_get_books_for_children_adult_books_excluded" – проверяет, что в списке для детей отсутствуют книги жанров "Ужасы" и "Детективы".
    * "test_get_books_for_children_return_count_books_for_children" – проверяет количество книг, подходящих для детей (из 5 книг только 3 имеют допустимые жанры).
 7. **Метод `add_book_in_favorites` :**
     * "test_add_book_in_favorites_add_book_added" – проверяет успешное добавление книги в избранное.
